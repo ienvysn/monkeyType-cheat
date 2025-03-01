@@ -9,31 +9,20 @@ edge_option= webdriver.EdgeOptions()
 edge_option.add_experimental_option("detach", True)
 driver=webdriver.Edge(options=edge_option)
 driver.get("https://monkeytype.com/")
+print("hi")
 time.sleep(1)
 
 cookie_accept= driver.find_element(By.CLASS_NAME, value="acceptAll")
 cookie_accept.click()
-# time.sleep(10)
 
+time.sleep(1)
 
 # ------CUSTOMIZATION-----
 
-fifty_words= driver.find_element(By.XPATH,value="/html/body/div[10]/main/div/div[1]/div/div[3]/button[2]")
+fifty_words= driver.find_element(By.XPATH,value="//*[@id='testConfig']/div/div[3]/button[2]")
 time.sleep(0.5)
 fifty_words.click()
-
-#
-# infinity= driver.find_element(By.XPATH,value="//html/body/div[10]/main/div/div[1]/div/div[5]/button[5]")
-# infinity.click()
-# time.sleep(0.2)
-# infinity_input= driver.find_element(By.XPATH,value="/html/body/div[9]/dialog[2]/form/input")
-# infinity_input.send_keys("0")
-# time.sleep(0.2)
-# ok_btn= driver.find_element(By.XPATH,value="/html/body/div[9]/dialog[2]/form/button")
-# ok_btn.click()
-# time.sleep(0.2)
-
-
+time.sleep(1)
 
 # MAIN SCRIPT
 while True:
@@ -47,7 +36,22 @@ while True:
 
     for i in range(len(separated_words)):
         text_box.send_keys(separated_words[i], Keys.SPACE)
-        time.sleep(0)
+        time.sleep(0.1)
+
+
+
+# infinity= driver.find_element(By.XPATH,value="//html/body/div[10]/main/div/div[1]/div/div[5]/button[5]")
+# infinity.click()
+# time.sleep(0.2)
+# infinity_input= driver.find_element(By.XPATH,value="/html/body/div[9]/dialog[2]/form/input")
+# infinity_input.send_keys("0")
+# time.sleep(0.2)
+# ok_btn= driver.find_element(By.XPATH,value="/html/body/div[9]/dialog[2]/form/button")
+# ok_btn.click()
+# time.sleep(0.2)
+
+
+
 
 
 
